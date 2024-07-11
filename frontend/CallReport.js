@@ -73,7 +73,7 @@ const CallReport = () => {
         ...(callInfo && { call_info: callInfo }),
       }));
 
-      const response = await axios.post('http://192.168.1.3:3000/api/report-call', reportData);
+      const response = await axios.post('http://localhost:3000/api/report-call', reportData);
       console.log(response.data);
       Alert.alert('Success', 'Reported successfully');
       setReportedCalls(prevReportedCalls => [...prevReportedCalls, ...selectedCalls]);
@@ -94,7 +94,7 @@ const CallReport = () => {
         ...(manualCallInfo && { call_info: manualCallInfo }), // Include call_info only if provided
       }];
 
-      const response = await axios.post('http://192.168.1.3:3000/api/report-call', reportData);
+      const response = await axios.post('http://localhost:3000/api/report-call', reportData);
       console.log(response.data);
       Alert.alert('Success', 'Reported successfully');
       setReportedCalls(prevReportedCalls => [...prevReportedCalls, { phoneNumber: manualPhoneNumber, call_info: manualCallInfo }]);
