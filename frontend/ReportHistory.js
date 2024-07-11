@@ -17,7 +17,7 @@ const ReportHistory = () => {
   const fetchReportHistory = async () => {
     try {
       const device_id = await DeviceInfo.getUniqueId();
-      const response = await axios.get(`http://192.168.1.3:3000/api/report-history/${device_id}`);
+      const response = await axios.get(`http://localhost:3000/api/report-history/${device_id}`);
       setReportHistory(response.data);
     } catch (error) {
       console.error('Error fetching report history:', error);
