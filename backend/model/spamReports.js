@@ -12,8 +12,3 @@ const spamReportsSchema = new Schema({
     report_time: { type: Date, default: Date.now }
 });
 
-<<<<<<< HEAD
-module.exports = mongoose.model('SpamReport', spamReportsSchema);
-=======
-module.exports = mongoose.model('SpamReport', spamReportsSchema);
->>>>>>> origin/master
