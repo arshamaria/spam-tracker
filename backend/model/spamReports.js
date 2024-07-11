@@ -8,7 +8,7 @@ const spamReportsSchema = new Schema({
     message: { type: String, default: null },
     call_info: { type: String, default: null },
     call_duration: { type: Number, default: null },
-    device_id: { type: String, required: true }, // Add this field
+    device_id: { type: String, required: true },
     report_time: { type: Date, default: Date.now }
 });
-
+module.exports = mongoose.model('SpamReport', spamReportsSchema);
